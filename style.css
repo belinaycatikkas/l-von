@@ -1,4 +1,73 @@
-/* Genel Ayarlar */
+/* Navigasyon Menüsü (Navbar) */
+.navbar {
+    background-color: transparent; /* Arka planı şeffaf yap */
+    box-shadow: none; /* Gölgeyi kaldır */
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease; /* Scroll'da renk değişimi için */
+}
+
+/* Scroll edildiğinde Navbar'ın renginin değişmesi (isteğe bağlı) */
+.navbar.scrolled {
+    background-color: #333; /* Scroll olduğunda koyu renk */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8em;
+    font-weight: 700;
+    /* color: #333; Bu satırı kaldırın veya yoruma alın, logo görsel kullanıldığı için renk önemli değil */
+}
+
+/* LOGO BOYUTU İÇİN EKLEYİN */
+.nav-logo {
+    height: 40px; /* Logonuzun yüksekliğini ayarlayın */
+    width: auto;
+    filter: brightness(0) invert(1); /* Logoyu beyaz yapar (eğer siyah ise) */
+}
+
+.nav-links a {
+    color: white; /* Şeffaf Navbar'da link metinlerini beyaz yap */
+    font-weight: 600;
+    font-size: 0.95em;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #007bff; /* Hover rengini koru */
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-partner {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    border: 1px solid #007bff; /* Butona çerçeve ekle */
+}
+
+.btn-partner:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.search-icon, .user-icon {
+    font-size: 1.2em;
+    color: white; /* Şeffaf Navbar'da ikonları beyaz yap */
+}/* Genel Ayarlar */
 body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
