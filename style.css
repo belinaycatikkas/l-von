@@ -1,0 +1,318 @@
+/* Genel Ayarlar */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navigasyon Menüsü (Navbar) */
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #333; /* LIVON logosunu burada göstereceğiz */
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #555;
+    font-weight: 600;
+    font-size: 0.95em;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #007bff; /* LOXONE'daki gibi mavi vurgu */
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-partner {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-partner:hover {
+    background-color: #0056b3;
+}
+
+.search-icon, .user-icon {
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Hero Section (Ana Görsel Alanı) */
+.hero-section {
+    /* DOĞRU KOD: url('klasör adı/dosya adı') söz dizimi kullanılır */
+    background: url('resimler/home.png') no-repeat center center/cover; 
+    color: white;
+    text-align: center;
+    padding: 150px 20px 100px 20px; /* Navbar için üst boşluk */
+    margin-top: 80px; /* Navbar yüksekliği kadar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+    position: relative;
+}
+
+.hero-section::before { /* Karartma efekti için */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Karartma */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+/* İçerik Bölümleri */
+.content-section {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.content-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.content-section .intro-text {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature-item {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-item h3 {
+    color: #007bff;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.feature-item p {
+    color: #555;
+}
+
+/* Call To Action Bölümü */
+.call-to-action {
+    background-color: #e9f5ff; /* Açık mavi arka plan */
+    text-align: center;
+    padding: 60px 20px;
+    margin-top: 50px;
+}
+
+.call-to-action h2 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+    color: #0056b3;
+}
+
+.call-to-action p {
+    font-size: 1.1em;
+    color: #444;
+    margin-bottom: 30px;
+}
+
+.btn-contact {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.btn-contact:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Küçük ekranlarda alta geçmesi için */
+}
+
+.footer-links a {
+    color: #bbb;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #007bff;
+}
+
+/* Responsive - Küçük ekranlar için düzenlemeler */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 15px;
+        gap: 10px;
+    }
+    .nav-actions {
+        width: 100%;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+    .hero-content p {
+        font-size: 1em;
+    }
+    .footer-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .footer-links {
+        margin-top: 10px;
+    }
+    .footer-links a {
+        margin: 0 10px;
+    }
+}/* Akıllı Ev Sayfası Özel Stilleri */
+
+/* Akıllı Ev Hero Section'ı için farklı bir arka plan istiyorsanız */
+.hero-akilli-ev {
+    /* Örneğin akıllı ev iç mekan görseli */
+    background: url('resim/akilli-ev-hero.jpg') no-repeat center center/cover; 
+    margin-top: 80px; 
+}
+
+/* Faydalar ve Farklar bölümleri için yazı düzeni */
+.benefits-section .features-grid,
+.difference-section .features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    text-align: left;
+}
+
+/* Detaylı Çözümler (Solutions) bölümü */
+.solution-details h3 {
+    color: #a233ff;
+    border-left: 4px solid #007bff;
+    padding-left: 15px;
+    margin-top: 30px;
+}
+
+/* Call to Action'daki iletişim bilgileri */
+.contact-footer-info {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #444;
+}
